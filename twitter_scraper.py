@@ -21,7 +21,7 @@ def search_for_hashtags(consumer_key, consumer_secret, access_token, access_toke
     fname = '_'.join(re.findall(r"#(\w+)", hashtag_phrase))
 
     #open the spreadsheet we will write to
-    with open('%s.csv' % (fname), 'wb') as file:
+    with open('%s.csv' % (fname), 'w', encoding='utf-8') as file:
 
         w = csv.writer(file)
 
